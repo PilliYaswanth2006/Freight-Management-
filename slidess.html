@@ -1,0 +1,126 @@
+<html>
+  <head>
+        <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .mySlides {
+        display: none;
+        padding: 20px;
+        text-align: left;
+        background-color: white;
+        margin: 20px auto;
+        width: 80%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      ul li {
+        margin: 10px 0;
+        font-size: 18px;
+        color: #555;
+      }
+
+      .w3-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #333;
+        color: white;
+        padding: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .w3-display-left {
+        left: 20px;
+      }
+
+      .w3-display-right {
+        right: 20px;
+      }
+
+      .w3-button:hover {
+        background-color: #555;
+      }
+    </style>
+
+
+  </head>
+  <body>
+    <div class="mySlides">
+      Major Benefits for Us:
+      <ul>
+        <li>Logic handling</li>
+        <li>Design by following protocols</li>
+        <li>Research</li>
+        <li>Working of business model</li>
+        <li>Working with Git</li>
+        <li>Efficient coding (focusing on time complexity and space complexity)</li>
+        <li>Responsive web design</li>
+      </ul>
+    </div>
+    
+    <div class="mySlides">
+      Benefits for User:
+      <ul>
+        <li>Interactive design</li>
+        <li>Understandable information</li>
+        <li>Safe payment</li>
+        <li>Communication feature between importers and exporters</li>
+        <li>Safe mediation</li>
+      </ul>
+    </div>
+    
+    <div class="mySlides">
+      Highlights of the Project:
+      <ul>
+        <li>Responsive web design</li>
+        <li>Efficient logic handling</li>
+        <li>Interactive user interface</li>
+        <li>Module design focusing on protocols</li>
+      </ul>
+    </div>
+    
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
+
+
+
+

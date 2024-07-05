@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+a{
+  text-decoration:none;
+  
+}
+
+a:hover,a:visited{
+  color:white;
+}
+
+a:active{
+  color:green;
+}
+iframe{
+  width:100%;
+  height:5000px;
+  border-style:none;
+}
+.radio-input input {
+  display: none;
+}
+
+.radio-input a {
+  text-decoration: none;
+  /* Remove underline */
+}
+
+.radio-input a:active {
+  background: none; /* Remove background color on active state */
+}
+
+.radio-input {
+  --container_width: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color:blue;
+  color:black;
+  width: var(--container_width);
+  overflow: hidden;
+  border: 3px solid rgba(53, 52, 52, 0.226);
+}
+
+.radio-input label {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 14px;
+}
+
+.selection {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: calc(var(--container_width) / 5);
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transition: .15s ease;
+}
+
+.radio-input input:checked ~ .selection {
+  background-color: rgb(11, 117, 223);
+  display: inline-block;
+}
+
+.radio-input input:nth-of-type(1):checked ~ .selection {
+  transform: translateX(calc(var(--container_width) * 0 / 5));
+}
+
+.radio-input input:nth-of-type(2):checked ~ .selection {
+  transform: translateX(calc(var(--container_width) * 1 / 5));
+}
+
+.radio-input input:nth-of-type(3):checked ~ .selection {
+  transform: translateX(calc(var(--container_width) * 2 / 5));
+}
+
+.radio-input input:nth-of-type(4):checked ~ .selection {
+  transform: translateX(calc(var(--container_width) * 3 / 5));
+}
+
+.radio-input input:nth-of-type(5):checked ~ .selection {
+  transform: translateX(calc(var(--container_width) * 4 / 5));
+}
+</style>
+<title>Navigation Buttons</title>
+</head>
+<body>
+
+<div class="radio-input">
+  <label>
+    <a href="Displayrequest.html" target="iframe_a">
+      <input type="radio" id="value-1" name="value-radio" value="value-1">
+      <span>
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" height="1.5em" width="1.5em">
+          <path fill="currentColor" d="M11 39h7.5V26.5h11V39H37V19.5L24 9.75 11 19.5Zm0 3q-1.25 0-2.125-.875T8 39V19.5q0-.7.325-1.35.325-.65.875-1.05l13-9.75q.4-.3.85-.45.45-.15.95-.15.5 0 .95.15.45.15.85.45l13 9.75q.55.4.875 1.05.325.65.325 1.35V39q0 1.25-.875 2.125T37 42H26.5V29.5h-5V42Zm13-17.65Z"/>
+        </svg>
+      </span>
+    </a>
+  </label>
+  <label>
+    <a href="#conversation" target="iframe_a" id="aconversation">
+      <input type="radio" id="value-2" name="value-radio" value="value-2">
+      <span>
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" height="1.5em" width="1.5em">
+          <path fill="currentColor" d="M7 40q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1v26q0 1.2-.9 2.1-.9.9-2.1.9Zm34-26.25-16.2 10.6q-.2.1-.375.175-.175.075-.425.075t-.425-.075q-.175-.075-.375-.175L7 13.75V37h34ZM24 21.9 40.8 11H7.25ZM7 13.75v.35-1.975.025V11v1.15-.05 2-.35V37Z"/>
+        </svg>
+      </span>
+    </a>
+  </label>
+  
+
+  
+  <label>
+    <a href="managelist.html" target="iframe_a">
+      <input type="radio" id="value-3" name="value-radio" value="value-3">
+      <span>
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" height="1.5em" width="1.5em">
+          <path fill="currentColor" d="M35.95 25.85V9.5q0-.65.425-1.075Q36.8 8 37.45 8q.65 0 1.075.425.425.425.425 1.075v13.35ZM9.5 40q-.65 0-1.075-.425Q8 39.15 8 38.5v-29q0-.65.425-1.075Q8.85 8 9.5 8q.65 0 1.075.425Q11 8.85 11 9.5v29q0 .65-.425 1.075Q10.15 40 9.5 40Zm14-24.2q-.65 0-1.075-.425Q22 14.95 22 14.3V9.5q0-.65.425-1.075Q22.85 8 23.5 8q.65 0 1.075.425Q25 8.85 25 9.5v4.8q0 .65-.425 1.075-.425.425-1.075.425Zm0 12.1q-.65 0-1.075-.425Q22 27.05 22 26.4v-4.8q0-.65.425-1.075.425-.425 1.075-.425.65 0 1.075.425Q25 20.95 25 21.6v4.8q0 .65-.425 1.075-.425.425-1.075.425Zm0 12.1q-.65 0-1.075-.425Q22 39.15 22 38.5v-4.8q0-.65.425-1.075.425-.425 1.075-.425.65 0 1.075.425Q25 33.05 25 33.7v4.8q0 .65-.425 1.075Q24.15 40 23.5 40Zm20.65-10.6 1.3-1.3q.5-.5.5-1.225 0-.725-.5-1.225l-1.3-1.3q-.5-.5-1.225-.5-.725 0-1.225.5l-1.3 1.3ZM30.55 40q-.3 0-.525-.225-.225-.225-.225-.525v-2.7q0-.05.2-.55l9.35-9.3 3.75 3.75-9.3 9.35q-.1.1-.55.2Z"/>
+        </svg>
+      </span>
+    </a>
+  </label>
+  <label>
+    <a href="#portfolio" target="iframe_a" id="aportfolio">
+      <input type="radio" id="value-4" name="value-radio" value="value-4">
+      <span>
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" height="1.5em" width="1.5em">
+          <path fill="currentColor" d="M24 23.95q-3.3 0-5.4-2.1-2.1-2.1-2.1-5.4 0-3.3 2.1-5.4 2.1-2.1 5.4-2.1 3.3 0 5.4 2.1 2.1 2.1 2.1 5.4 0 3.3-2.1 5.4-2.1 2.1-5.4 2.1ZM37 40H11q-1.25 0-2.125-.875T8 37v-1.7q0-1.9.95-3.25T11.4 30q3.35-1.5 6.425-2.25Q20.9 27 24 27q3.1 0 6.15.775 3.05.775 6.4 2.225 1.55.7 2.5 2.05.95 1.35.95 3.25V37q0 1.25-.875 2.125T37 40Zm-26-3h26v-1.7q0-.8-.475-1.525-.475-.725-1.175-1.075-3.2-1.55-5.85-2.125Q26.85 30 24 30t-5.55.575q-2.7.575-5.85 2.125-.7.35-1.15 1.075Q11 34.5 11 35.3Zm13-16.05q1.95 0 3.225-1.275Q28.5 18.4 28.5 16.45q0-1.95-1.275-3.225Q25.95 11.95 24 11.95q-1.95 0-3.225 1.275Q19.5 14.5 19.5 16.45q0 1.95 1.275 3.225Q22.05 20.95 24 20.95Zm0-4.5ZM24 37Z"/>
+        </svg>
+      </span>
+    </a>
+  </label>
+  <label>
+    <a href="requesting.html" target="iframe_a">
+      <input type="radio" id="value-5" name="value-radio" value="value-5">
+      <span>
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" height="1.5em" width="1.5em">
+          <path fill="currentColor" d="M24.15 34q.65 0 1.075-.425.425-.425.425-1.075v-6.8h6.9q.6 0 1.025-.425Q34 24.85 34 24.2q0-.65-.425-1.075-.425-.425-1.075-.425h-6.85v-7.25q0-.6-.425-1.025Q24.8 14 24.15 14q-.65 0-1.075.425-.425.425-.425 1.075v7.2h-7.2q-.6 0-1.025.425Q14 23.55 14 24.2q0 .65.425 1.075.425.425 1.075.425h7.15v6.85q0 .6.425 1.025Q23.5 34 24.15 34ZM24 44q-4.25 0-7.9-1.525-3.65-1.525-6.35-4.225-2.7-2.7-4.225-6.35Q4 28.25 4 24q0-4.2 1.525-7.85Q7.05 12.5 9.75 9.8q2.7-2.7 6.35-4.25Q19.75 4 24 4q4.2 0 7.85 1.55Q35.5 7.1 38.2 9.8q2.7 2.7 4.25 6.35Q44 19.8 44 24q0 4.25-1.55 7.9-1.55 3.65-4.25 6.35-2.7 2.7-6.35 4.225Q28.2 44 24 44Zm0-20Zm0 17q7 0 12-5t5-12q0-7-5-12T24 7q-7 0-12 5T7 24q0 7 5 12t12 5Z"/>
+        </svg>
+      </span>
+    </a>
+  </label>
+  <span class="selection"></span>
+</div>
+<br>
+<iframe name="iframe_a"></iframe>
+
+
+<script>
+  let aconversation = document.getElementById("aconversation");
+let aportfolio = document.getElementById("aportfolio");
+
+aconversation.addEventListener("click", () => {
+  document.querySelector("iframe").srcdoc = `
+    <p>Here the conversations between the clients will be implemented...</p>
+  `;
+});
+
+aportfolio.addEventListener("click", () => {
+  document.querySelector("iframe").srcdoc = `
+    <p>Here the portfolio of the user and user settings will be implemented...</p>
+  `;
+});
+
+</script>
+</body>
+</html>
