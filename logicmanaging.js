@@ -15,7 +15,7 @@ function render() {
     for (let i = 0; i < manage.length; i++) {
         let text = document.createElement('li');
         text.innerHTML = `
-            <span>${manage[i].weight}</span>
+            <span>Weight: ${manage[i].weight}</span>
             <br> <span>From: ${manage[i].from}</span>
             <br> <span>To: ${manage[i].to}</span>
             <br> <span>Description: ${manage[i].data}</span>
